@@ -1,3 +1,4 @@
+#리스트
 heroes = ["아이언맨","토르", "헐크", "스칼렛 위치"]#[]로 시작과 끝을 나타냄, ','로 각 리스트의 요소를 구분
 
 numbers = []#공백리스트 생성 코드로 항목추가 요소가 많을 경우 요소의 수를 예측하기 쉬워짐
@@ -31,3 +32,17 @@ heroes.sort()#항목들을 크기순으로 정렬/ 문자열은 알파벳순으�
 numbers = [9,6,7,1,8,4,5,3,2]
 new_list = sorted(numbers)#sort()는 원래의 리스트를 변경한다, 즉 정렬된 새로운 리스트가 반환되는 것이 아니기 때문에 sorted()함수를 사용하여 새로운 리스트를 반환. 즉 정렬전과 정렬후가 공존
 new_list = sorted(numbers,reverse=True)#역으로 정렬하고 싶을 때 reverse=True를 추가.
+
+#딕셔너리
+phone_book = {}#공백 딕셔너리 '{}'로 생성/ 서로 관련된 키와 값이 함께 저장 => 키-값 쌍(key-value pair)
+phone_book["홍길동"] = "010-1234-5678"#공백 딕셔너리에 추가.
+phone_book = {"홍길동": "010-1234-5678"}#딕셔너리를 생성하면서 동시에 초기화
+
+print(phone_book["홍길동"])#키를 가지고 연관된 값 찾기의 특화./리스트는 인덱스 딕셔너리는 키가 있어야 값을 찾을 수 있다.
+phone_book.keys()#딕셔너리에 있는 모든 키를 출력
+phone_book.values()#딕셔너리에 사용되는 모든 값 출력
+
+for key in sorted(phone_book.keys()):#정렬 후 출력
+    print(key, phone_book[key])#딕셔너리의 모든 항목을 방문하며 출력
+del phone_book["홍길동"]#del을 이용해 딕셔너리의 항목을 삭제
+phone_book.clear()#딕셔너리의 모든 항목을 삭제.
